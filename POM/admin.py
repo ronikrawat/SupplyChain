@@ -30,5 +30,4 @@ class AdminPage:
         newpath = xpath.replace('{search_data}', search_data)
         self.wrapper.click_element(self.nav_manufacturers)
         self.wrapper.click_element(literal_eval(newpath))
-        self.wrapper.page_down()
         self.wrapper.click_element(self.manufacturer_delete)

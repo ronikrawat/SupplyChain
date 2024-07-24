@@ -11,11 +11,8 @@ from time import sleep
 def _wait(func):
     def wrapper(*args, **kwargs):
         driver = args[0].driver
-        try:
+        if len(args) > 1:
             locator = args[1]
-        except (ElementClickInterceptedException, IndexError):
-            return func(*args, **kwargs)
-        else:
             wait = WebDriverWait(driver, 5)
             v = visibility_of_element_located(locator)
             print(f"waiting for {args[1]} to appear")
@@ -25,7 +22,7 @@ def _wait(func):
                 s = SeleniumWrapper(driver)
                 s.scroll_to_end()
                 wait.until(v)
-            return func(*args, **kwargs)
+        return func(*args, **kwargs)
 
     return wrapper
 
@@ -44,7 +41,11 @@ class SeleniumWrapper:
         self.driver = driver
 
     def click_element(self, xpath):
-        self.driver.find_element(*xpath).click()
+        try:
+            self.driver.find_element(*xpath).click()
+        except ElementClickInterceptedException:
+            self.scroll_to_end()
+            self.click_element(xpath)
 
 
     def send_text(self, xpath, value):
