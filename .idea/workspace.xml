@@ -4,26 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b259a91c-a61b-4914-b32d-e3f82ca6565a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POM/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POM/homepage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POM/login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locator.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utilites/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utilites/_lib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utilites/excel_lib.py" afterDir="false" />
+    <list default="true" id="b259a91c-a61b-4914-b32d-e3f82ca6565a" name="Changes" comment="Framework for supplychain">
+      <change afterPath="$PROJECT_DIR$/POM/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POM/manufacturers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_manufacturers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POM/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/POM/homepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POM/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/POM/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locator.xls" beforeDir="false" afterPath="$PROJECT_DIR$/locator.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilites/_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilites/_lib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilites/excel_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilites/excel_lib.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +34,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ronikrawat&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ronikrawat/SupplyChain.git&quot;,
+    &quot;accountId&quot;: &quot;68f62b90-3e8a-4e83-a655-f2c05fba7d80&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2jduD8EgsBYoOHdsi6BxhAQfK0L" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,9 +57,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for test_admin.Test_Admin.test_add_manufacturer.executor": "Run",
     "Python tests.Python tests for test_login.Test_Login.test_login.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/supplychain/pythonProject"
   }
 }]]></component>
@@ -61,8 +68,26 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\supplychain\pythonProject" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\supplychain\pythonProject" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests for test_admin.Test_Admin.test_add_manufacturer">
+    <configuration name="Python tests for test_admin.Test_Admin.test_add_manufacturer" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_admin.Test_Admin.test_add_manufacturer&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_login.Test_Login.test_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -80,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_admin.Test_Admin.test_add_manufacturer" />
         <item itemvalue="Python tests.Python tests for test_login.Test_Login.test_login" />
       </list>
     </recent_temporary>
@@ -100,6 +126,27 @@
       <option name="presentableId" value="Default" />
       <updated>1721729153213</updated>
     </task>
+    <task id="LOCAL-00001" summary="Framework for supplychain">
+      <option name="closed" value="true" />
+      <created>1721748007688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721748007688</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Framework for supplychain">
+      <option name="closed" value="true" />
+      <created>1721748311791</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721748311791</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Framework for supplychain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework for supplychain" />
   </component>
 </project>
