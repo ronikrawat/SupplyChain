@@ -20,6 +20,14 @@ class AdminPage:
         self.wrapper.send_text(self.manufacturer_username, username)
         self.wrapper.send_text(self.manufacturer_password, password)
         self.wrapper.click_element(self.btn_add_manufacturer)
+        self.wrapper.alert_box_accept()
+
+    def check_manufacturer_added(self, search_data):
+        self.wrapper.click_element(self.nav_manufacturers)
+        xpath = str(self.manufacturer_check)
+        newpath = xpath.replace("{search_data}", search_data)
+        return self.wrapper.check_element(literal_eval(newpath))
+
 
     # Manufacturer Added Successfully
     def confirm_popup(self):

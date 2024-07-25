@@ -3,7 +3,7 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.expected_conditions import visibility_of_element_located
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import ElementClickInterceptedException, TimeoutException
+from selenium.common.exceptions import ElementClickInterceptedException, TimeoutException, NoSuchElementException
 from random import randrange
 from time import sleep
 
@@ -21,7 +21,11 @@ def _wait(func):
             except TimeoutException:
                 s = SeleniumWrapper(driver)
                 s.scroll_to_end()
-                wait.until(v)
+                try:
+                    wait.until(v)
+                except TimeoutException:
+                    print(f"Timeout again after scrolling for {locator}.")
+                    return False
         return func(*args, **kwargs)
 
     return wrapper
@@ -47,7 +51,6 @@ class SeleniumWrapper:
             self.scroll_to_end()
             self.click_element(xpath)
 
-
     def send_text(self, xpath, value):
         self.driver.find_element(*xpath).send_keys(value)
 
@@ -66,9 +69,23 @@ class SeleniumWrapper:
         alert = self.driver.switch_to.alert
         return alert.text
 
+    def alert_box_accept(self):
+        alert = self.driver.switch_to.alert.accept()
+
     def page_down(self):
         action = ActionChains(self.driver)
         action.send_keys(Keys.PAGE_DOWN).perform()
 
     def scroll_to_end(self):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    def check_element(self, xpath):
+        try:
+            element = self.driver.find_element(*xpath)
+            return element.is_displayed()
+        except NoSuchElementException:
+            print(f"Element {xpath} not found.")
+            return False
+        except TimeoutException:
+            print(f"Timeout while trying to check if {xpath} is displayed.")
+            return False

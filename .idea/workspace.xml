@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b259a91c-a61b-4914-b32d-e3f82ca6565a" name="Changes" comment="Framework for supplychain">
-      <change afterPath="$PROJECT_DIR$/POM/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POM/manufacturers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_manufacturers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POM/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/POM/homepage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POM/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/POM/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locator.xls" beforeDir="false" afterPath="$PROJECT_DIR$/locator.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilites/_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilites/_lib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilites/excel_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilites/excel_lib.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,15 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_admin.Test_Admin.test_add_manufacturer.executor": "Run",
-    "Python tests.Python tests for test_login.Test_Login.test_login.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/supplychain/pythonProject"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_admin.Test_Admin.test_add_manufacturer.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.Test_Login.test_login.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/supplychain/pythonProject&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\supplychain\pythonProject" />
