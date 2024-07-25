@@ -1,5 +1,8 @@
 class Test_Manufacturers:
-    pass
-    # def test_change_password(self,pages):
-    #     pages.loginpage.login("admin","admin123")
-    #     pages.manufacturer.edit_profile()
+
+    def test_change_password(self, pages):
+        pages.loginpage.login("uuuuuuuu", "uuuuuuuuuu", "Manufacturer")
+        pages.manufacturer._edit_profile()
+        actual = pages.manufacturer._change_password("uuuuuuuuuu", "xxxxxx", "xxxxxx")
+        expected = "Password Updated Successfully"
+        assert actual == expected

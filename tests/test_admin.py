@@ -1,5 +1,3 @@
-from POM.admin import AdminPage
-
 
 class Test_Admin:
 
@@ -7,7 +5,7 @@ class Test_Admin:
         pages.loginpage.login("admin", "admin123", "Admin")
         pages.adminpage.add_manufacturers(
             "uuuuu", "uuuuu@gmail.com", "8888888888", "uuuuuuuu", "uuuuuuuuuu")
-        value = "uuuuu@gmail.dom"
+        value = "uuuuu@gmail.com"
         assert True == pages.adminpage.check_manufacturer_added(value), f"{value} is not found"
         # expected_message = "Manufacturer Added Successfully"
         # assert expected_message == pages.adminpage.confirm_popup(), f"Expected value [{expected_message}] is not same as actual value [{pages.adminpage.add_manufacturers_confirm_popup()}]"
@@ -18,3 +16,4 @@ class Test_Admin:
         pages.adminpage.remove_manufacturer(search_data)
         expected_result = "manufacturers Deleted Successfully"
         assert expected_result == pages.adminpage.confirm_popup()
+

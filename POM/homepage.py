@@ -11,3 +11,6 @@ class Homepage:
 
     def click_manufacturers(self):
         self.wrapper.click_element(self.nav_manufacturers)
+
+    def _logout(self):
+        self.wrapper.click_element(self.btn_logout)
