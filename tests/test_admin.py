@@ -1,14 +1,26 @@
+from utilites.excel_lib import get_test_data_header, get_test_data
+from pytest import mark
+
 
 class Test_Admin:
+    admin_header = get_test_data_header("testdata", "admin_login")
+    admin_data = get_test_data("testdata", "admin_login")
+    add_manufacturer_header = get_test_data_header("testdata", "test_add_manufacturer")
+    add_manufacturer_data = get_test_data("testdata", "test_add_manufacturer")
 
-    def test_add_manufacturer(self, pages):
-        pages.loginpage.login("admin", "admin123", "Admin")
+    @mark.parametrize(admin_header, admin_data)
+    @mark.parametrize(add_manufacturer_header, add_manufacturer_data)
+    def test_add_manufacturer(self, pages, username, password, user_type, name, email, phone, m_username, m_password):
+        pages.loginpage.login(username, password, user_type)
         pages.adminpage.add_manufacturers(
-            "uuuuu", "uuuuu@gmail.com", "8888888888", "uuuuuuuu", "uuuuuuuuuu")
-        value = "uuuuu@gmail.com"
-        assert True == pages.adminpage.check_manufacturer_added(value), f"{value} is not found"
+            name, email, phone, m_username, m_password)
+        value = email
+        assert True == pages.adminpage.check_manufacturer_added(
+            value), f"{value} is not found"
         # expected_message = "Manufacturer Added Successfully"
-        # assert expected_message == pages.adminpage.confirm_popup(), f"Expected value [{expected_message}] is not same as actual value [{pages.adminpage.add_manufacturers_confirm_popup()}]"
+        # assert expected_message == pages.adminpage.confirm_popup(), \
+        #     (f"Expected value [{expected_message}] is not same as actual value "
+        #      f"[{pages.adminpage.add_manufacturers_confirm_popup()}]")
 
     def test_delete_manufacturer(self, pages, search_data="uuuuu@gmail.com"):
         pages.loginpage.login("admin", "admin123", "Admin")
@@ -16,4 +28,3 @@ class Test_Admin:
         pages.adminpage.remove_manufacturer(search_data)
         expected_result = "manufacturers Deleted Successfully"
         assert expected_result == pages.adminpage.confirm_popup()
-

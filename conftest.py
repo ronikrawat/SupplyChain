@@ -42,4 +42,5 @@ def pages(driver):
         manufacturer = Manufacturers(driver)
         adminpage = AdminPage(driver)
         homepage = Homepage(driver)
+
     return Page()

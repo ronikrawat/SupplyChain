@@ -63,7 +63,7 @@ class SeleniumWrapper:
         action.move_to_element(self.driver.find_element(*xpath)).perform()
 
     def screenshot(self):
-        self.driver.save_screenshot(f"./Screenshot/SS{randrange(1, 999)}.png")
+        self.driver.save_screenshot(f"D:\supplychain\pythonProject\Screenshot\SS{randrange(1, 999)}.png")
 
     def alert_box_text(self):
         alert = self.driver.switch_to.alert
@@ -77,15 +77,16 @@ class SeleniumWrapper:
         action.send_keys(Keys.PAGE_DOWN).perform()
 
     def scroll_to_end(self):
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        self.driver.execute_script(
+            "window.scrollTo(0, document.body.scrollHeight);")
 
     def check_element(self, xpath):
-        try:
-            element = self.driver.find_element(*xpath)
-            return element.is_displayed()
-        except NoSuchElementException:
-            print(f"Element {xpath} not found.")
-            return False
-        except TimeoutException:
-            print(f"Timeout while trying to check if {xpath} is displayed.")
-            return False
+        # try:
+        element = self.driver.find_element(*xpath)
+        return element.is_displayed()
+        # except NoSuchElementException:
+        #     print(f"Element {xpath} not found.")
+        #     return False
+        # except TimeoutException:
+        #     print(f"Timeout while trying to check if {xpath} is displayed.")
+        #     return False
