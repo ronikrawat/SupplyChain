@@ -12,8 +12,14 @@ class Homepage:
     def click_manufacturers(self):
         self.wrapper.click_element(self.nav_manufacturers)
 
+    def click_order(self):
+        self.wrapper.click_element(self.nav_orders)
+
     def click_products(self):
         self.wrapper.click_element(self.nav_products)
 
     def _logout(self):
         self.wrapper.click_element(self.btn_logout)
+
+    def check_login(self):
+        return self.wrapper.read_text(self.welcome_msg).splitlines()[0].strip()

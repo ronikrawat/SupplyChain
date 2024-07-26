@@ -81,8 +81,6 @@ class AdminPage:
         self.wrapper.clear_text(self.product_price)
         self.wrapper.send_text(self.product_price, new_price)
         self.wrapper.click_element(self.sm_enable)
-        from time import sleep
-        sleep(10)
         self.wrapper.click_element(self.btn_update)
         # self.wrapper.send_text(self.p_price, new_price)
         # self.wrapper.click_element(self.btn_update)

@@ -5,6 +5,7 @@ from POM.admin import AdminPage
 from POM.homepage import Homepage
 from POM.login import LoginPage
 from POM.manufacturers import Manufacturers
+from POM.orders import Orderspage
 from utilites._lib import SeleniumWrapper
 
 url = r"http://49.249.28.218:8081/AppServer/Supply_Chain_Management/"
@@ -42,5 +43,6 @@ def pages(driver):
         manufacturer = Manufacturers(driver)
         adminpage = AdminPage(driver)
         homepage = Homepage(driver)
+        orderspage = Orderspage(driver)
 
     return Page()

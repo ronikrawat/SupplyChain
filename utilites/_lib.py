@@ -80,8 +80,11 @@ class SeleniumWrapper:
         self.driver.execute_script(
             "window.scrollTo(0, document.body.scrollHeight);")
 
-    def clear_text(self,xpath):
+    def clear_text(self, xpath):
         self.driver.find_element(*xpath).clear()
+
+    def read_text(self, xpath):
+        return self.driver.find_element(*xpath).text
 
     def check_element(self, xpath):
         # try:
