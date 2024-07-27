@@ -15,6 +15,9 @@ class Homepage:
     def click_order(self):
         self.wrapper.click_element(self.nav_orders)
 
+    def click_invoice(self):
+        self.wrapper.click_element(self.nav_invoice)
+
     def click_products(self):
         self.wrapper.click_element(self.nav_products)
 

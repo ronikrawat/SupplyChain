@@ -3,10 +3,11 @@ from pytest import fixture
 
 from POM.admin import AdminPage
 from POM.homepage import Homepage
+from POM.invoice import Invoicepage
 from POM.login import LoginPage
 from POM.manufacturers import Manufacturers
 from POM.orders import Orderspage
-from utilites._lib import SeleniumWrapper
+from POM.retailer import Retailerpage
 
 url = r"http://49.249.28.218:8081/AppServer/Supply_Chain_Management/"
 
@@ -44,5 +45,6 @@ def pages(driver):
         adminpage = AdminPage(driver)
         homepage = Homepage(driver)
         orderspage = Orderspage(driver)
-
+        invoicepage = Invoicepage(driver)
+        retailerpage = Retailerpage(driver)
     return Page()
