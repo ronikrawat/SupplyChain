@@ -22,10 +22,10 @@ def get_test_data_header(worksheet, testcase):
     sheet = book.sheet_by_name(worksheet)
     used_rows = sheet.nrows
     header = ""
-    for i in range(0,used_rows):
+    for i in range(0, used_rows):
         row = sheet.row_values(i)
         if row[0] == testcase:
-            row1 = sheet.row_values(i-1)
+            row1 = sheet.row_values(i - 1)
             header = [i.strip() for i in row1[2:] if i.strip()]
             break
     return ",".join(header)

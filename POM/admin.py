@@ -36,7 +36,7 @@ class AdminPage:
 
     def remove_manufacturer(self, search_data):  # Retailer Deleted Successfully
         xpath = str(self.manufacturer_check)
-        newpath = xpath.replace('{search_data}', search_data)
+        newpath = xpath.replace("{search_data}", search_data)
         self.wrapper.click_element(self.nav_manufacturers)
         self.wrapper.click_element(literal_eval(newpath))
         self.wrapper.click_element(self.manufacturer_delete)
@@ -85,4 +85,3 @@ class AdminPage:
         # self.wrapper.send_text(self.p_price, new_price)
         # self.wrapper.click_element(self.btn_update)
         self.wrapper.alert_box_accept()
-

@@ -5,7 +5,7 @@ from utilites.excel_lib import worksheet
 @worksheet("invoice")
 class Invoicepage:
 
-    def __init__(self,driver):
+    def __init__(self, driver):
         self.driver = driver
         self.wrapper = SeleniumWrapper(self.driver)
 

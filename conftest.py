@@ -13,10 +13,7 @@ url = r"http://49.249.28.218:8081/AppServer/Supply_Chain_Management/"
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser",
-                     action="store",
-                     dest="browser",
-                     default="chrome")
+    parser.addoption("--browser", action="store", dest="browser", default="chrome")
 
 
 @fixture
@@ -47,4 +44,5 @@ def pages(driver):
         orderspage = Orderspage(driver)
         invoicepage = Invoicepage(driver)
         retailerpage = Retailerpage(driver)
+
     return Page()
