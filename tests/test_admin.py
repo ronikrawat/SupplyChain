@@ -72,7 +72,6 @@ class Test_Admin:
         assert True == pages.adminpage.check_product(
             search_data
         ), f"Product {search_data} not found"
-        print((update_product, update_price, "c" * 50))
         pages.adminpage.edit_product(update_product, update_price)
         assert True == pages.adminpage.match_product_price(
             update_product, product_price
