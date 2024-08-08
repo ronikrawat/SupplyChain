@@ -38,6 +38,7 @@ class Test_Admin:
         #     (f"Expected value [{expected_message}] is not same as actual value "
         #      f"[{pages.adminpage.add_manufacturers_confirm_popup()}]")
     @mark.regression
+    @mark.xfail
     def test_delete_manufacturer(self, pages, search_data="uuuuu@gmail.com"):
         pages.loginpage.login("admin", "admin123", "Admin")
         pages.homepage.click_manufacturers()

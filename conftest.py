@@ -14,17 +14,28 @@ url = r"http://xxxxxxxxxxxxxxx/AppServer/Supply_Chain_Management/" #confidential
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", dest="browser", default="chrome")
+    parser.addoption("--headless", action="store_true", dest="headless")
 
 
 @fixture
 def driver(request):
     browser = request.config.option.browser
+    _headless = request.config.option.headless
     if browser.upper() == "CHROME":
-        _browser = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        if _headless:
+            options.add_argument('--headless')
+        _browser = webdriver.Chrome(options=options)
     elif browser.upper() == "FIREFOX":
-        _browser = webdriver.Firefox()
+        options = webdriver.FirefoxOptions()
+        if _headless:
+            options.add_argument('--headless')
+        _browser = webdriver.Firefox(options=options)
     elif browser.upper() == "EDGE":
-        _browser = webdriver.Edge()
+        options = webdriver.EdgeOptions()
+        if _headless:
+            options.add_argument('--headless')
+        _browser = webdriver.Edge(options=options)
     else:
         raise Exception("Invalid Browser")
     _browser.get(url)
