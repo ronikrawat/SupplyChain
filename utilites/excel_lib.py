@@ -1,8 +1,7 @@
 from xlrd import open_workbook
 
-_test_data_file = r"D:\supplychain\pythonProject\TestData.xls"
-_locator_file = r"D:\supplychain\pythonProject\locator.xls"
-
+_test_data_file = r"TestData.xls"
+_locator_file = r"locator.xls"
 
 def worksheet(worksheet_name):
     def get_locators(cls):

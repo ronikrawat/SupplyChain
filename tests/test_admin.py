@@ -1,7 +1,6 @@
 from utilites.excel_lib import get_test_data_header, get_test_data
 from pytest import mark
 
-
 class Test_Admin:
     admin_header = get_test_data_header("testdata", "admin_login")
     admin_data = get_test_data("testdata", "admin_login")
@@ -38,14 +37,14 @@ class Test_Admin:
         # assert expected_message == pages.adminpage.confirm_popup(), \
         #     (f"Expected value [{expected_message}] is not same as actual value "
         #      f"[{pages.adminpage.add_manufacturers_confirm_popup()}]")
-
+    @mark.regression
     def test_delete_manufacturer(self, pages, search_data="uuuuu@gmail.com"):
         pages.loginpage.login("admin", "admin123", "Admin")
         pages.homepage.click_manufacturers()
         pages.adminpage.remove_manufacturer(search_data)
         expected_result = "manufacturers Deleted Successfully"
         assert expected_result == pages.adminpage.confirm_popup()
-
+    @mark.smoke
     @mark.parametrize(add_product_header, add_product_data)
     @mark.parametrize(admin_header, admin_data)
     @mark.parametrize(search_product_header, search_product_price)

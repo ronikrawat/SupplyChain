@@ -7,6 +7,6 @@ class Test_Login:
     data = get_test_data("testdata", "test_login")
     new = header.split(",")
 
-    @mark.parametrize(header, data)
+    @mark.parametrize(header, data) #"username,password,user_type" @[(un,pas,uy),(un,pas,uy),(un,pas,uy)]
     def test_login(self, pages, username, password, user_type):
         pages.loginpage.login(username, password, user_type)

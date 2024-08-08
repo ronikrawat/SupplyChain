@@ -68,7 +68,7 @@ class SeleniumWrapper:
 
     def screenshot(self):
         self.driver.save_screenshot(
-            f"D:\supplychain\pythonProject\Screenshot\SS{randrange(1, 999)}.png"
+            f"..\Screenshot\SS{randrange(1, 999)}.png"
         )
 
     def alert_box_text(self):
